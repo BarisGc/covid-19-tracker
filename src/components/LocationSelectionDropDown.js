@@ -4,6 +4,7 @@ import 'react-dropdown/style.css';
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 
+import Loading from './general/Loading';
 import { fetchCovidData, changeSelectedLocation } from "../redux/covid19DataSlice";
 import { Col } from 'react-bootstrap';
 
@@ -20,11 +21,6 @@ function LocationSelectionDropDown() {
         }
     }, [dispatch, status])
 
-    // const options = [
-    //     { value: 'chocolate', label: 'Chocolate' },
-    //     { value: 'strawberry', label: 'Strawberry' },
-    //     { value: 'vanilla', label: 'Vanilla' },
-    // ];
     const options = dataList.map((data) => {
         return {
             value: data.Slug,
@@ -45,8 +41,8 @@ function LocationSelectionDropDown() {
     }
     return (
         <>
-            {/* {status === 'loading' && <div xs={12} className='d-flex justify-content-center'><Loading /></div>} */}
-            {status === 'succeeded' && <Col md={{ span: 4, offset: 4 }}>
+            {status === 'loading' && <Loading />}
+            {status === 'succeeded' && <Col md={{ span: 4, offset: 4 }} className='mt-3'>
                 <Select
                     className={''}
                     name="selectedLocation"

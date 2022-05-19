@@ -1,0 +1,44 @@
+/* General */
+
+/* Content Component*/
+
+.contentCards {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    border: 0 !important;
+}
+
+.infectedCardBody {
+    background-color: #B0D7FD;
+}
+
+.infectedCardFooter {
+    background-color: #576BFE;
+    border: 0 !important;
+}
+
+.recoveredCardBody {
+    background-color: #DDF6E2;
+}
+
+.recoveredCardFooter {
+    border: 0 !important;
+    background-color: #6EFA70;
+}
+
+.deathsCardBody {
+    background-color: #F4D6D6;
+}
+
+.deathsCardFooter {
+    border: 0 !important;
+    background-color: #F96A6A;
+}
+
+.activeCardBody {
+    background-color: #F4E1C9;
+}
+
+.activeCardFooter {
+    border: 0 !important;
+    background-color: #F2E564;
+}

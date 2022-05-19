@@ -8,7 +8,7 @@ function Header() {
                 <Card.Img variant="top" src="/assets/covid19_bannerV1.png" />
                 <Card.Body>
                     <Card.Title className='fs-5 text-center'>Global And Country Wise Cases of Corona Virus</Card.Title>
-                    <Card.Text className='fs-6 text-center'>
+                    <Card.Text className='fs-6 text-center fst-italic'>
                         (For a Particular select a Country from below)
                     </Card.Text>
                 </Card.Body>
