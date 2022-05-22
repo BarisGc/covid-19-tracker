@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 //Fetch Data
-export const fetchCovidData = createAsyncThunk('users/getCovidData',
+export const fetchCovidData = createAsyncThunk('data/getCovidData',
     async () => {
         let one = `https://api.covid19api.com/summary`
 
@@ -22,15 +22,6 @@ export const covid19DataSlice = createSlice({
     reducers: {
         changeSelectedLocation: (state, action) => {
             state.selectedLocation = action.payload
-        },
-        assignNewCourseToUser: (state, action) => {
-            const { userID, course_name, measured_at, completed_at } = action.payload
-            state.newCourseDataForUser.push({
-                userID: userID,
-                course_name: course_name,
-                measured_at: measured_at,
-                completed_at: completed_at,
-            })
         },
     },
     extraReducers: {
